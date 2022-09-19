@@ -47,6 +47,8 @@ I have followed **clean code architecture patterns** to split our app code into 
  - **Domain:** Contain our domain logic. Not much in this example, but this layer will be transversal to technologies, we can apply unit test to this code, etc. etc.
  - **Storage:** Contain the storage logic that now is directly storing data in files, but will turn to be stored in a db in the future. Different connector can be written for different storage systems and only this layer needs to be changed for that
 
+This architectural redesign has been added to a different branch in the repo called **clean_architecture** cause I have done a really quick approach with many improvements needed, but I think is enough to get an overall idea.
+
 # Further improvements
 
 Though this workaround solution can scale vertically taking advantage of all the cores of the host (and score pretty well in the example because we are running 8 simultaneuos processes and standard computers usually have 8 cores) the solution is not going to scale when the requests increase to several thousands and **we need  an architecture able to scale horizontally** in several hosts.
