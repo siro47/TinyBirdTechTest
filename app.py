@@ -29,7 +29,7 @@ class DataReceiverHandler(tornado.web.RequestHandler):
         records_valid = 0
         records_invalid = 0
         
-        with open(f"csv/nyc_taxi-{date.today()}.csv", 'a') as fw:
+        with open(TEMPORAL_FILE_NAME, 'a') as fw:
             fieldnames = [
                 'vendorid',
                 'tpep_pickup_datetime',
